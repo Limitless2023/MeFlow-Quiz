@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* ============================================================
+ * Oatmeal Olive Design System -- Tailwind v4 Theme
+ * 源自 MeFlow-Agent-Intro 设计语言
+ * ============================================================ */
+@theme {
+  /* -- 品牌色: 橄榄绿 ---------------------------------------- */
+  --color-olive: #5c6b50;
+  --color-olive-dark: #4a5740;
+  --color-olive-light: #e8ebe5;
+  --color-olive-bg: #f0f2ed;
+  --color-cream: #fdfdf8;
+
+  /* -- 语义色 ------------------------------------------------ */
+  --color-success: #28c840;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+
+  /* -- 字体 -------------------------------------------------- */
+  --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Fraunces', Georgia, serif;
+
+  /* -- 阴影 -------------------------------------------------- */
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+  --shadow-card-hover: 0 10px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.04);
+
+  /* -- 动画 -------------------------------------------------- */
+  --animate-fade-in: fade-in 0.4s ease-out;
+  --animate-slide-up: slide-up 0.3s ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* -- 全局基础样式 -------------------------------------------- */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+}
+
+/* -- 选中高亮色 ---------------------------------------------- */
+::selection {
+  background-color: var(--color-olive-light);
+  color: var(--color-olive-dark);
+}
